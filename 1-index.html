@@ -1,0 +1,207 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WARRIOR - Choose Your Weapon</title><meta name="description" content="4 training programs. $19.99 USD each. Buy once, yours forever. Instant PDF download."><meta name="theme-color" content="#0b0b0c">
+<style>html, body, #root { margin: 0; min-height: 100%; }
+body { background: #0b0b0c; }
+:root { --ds-page: #0b0b0c; }
+
+.warrior {
+    --ds-ink: #f3efe4;
+    --ds-ink-2: #b9b3a4;
+    --ds-hairline: #2a2a2d;
+    --ds-teal: #ffd400;
+    --w-black: #0b0b0c;
+    --w-panel: #141416;
+    --w-red: #e62e2e;
+    --w-yellow: #ffd400;
+    --w-cream: #f3efe4;
+    color: var(--w-cream);
+}
+
+.warrior p { color: var(--ds-ink-2); }
+
+/* Hero */
+.w-hero {
+    position: relative;
+    padding: 28px 22px 24px;
+    margin-bottom: 28px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(230, 46, 46, 0.28), transparent 55%),
+        repeating-linear-gradient(45deg, rgba(255, 212, 0, 0.05) 0 2px, transparent 2px 10px),
+        var(--w-panel);
+    border: 1px solid #2a2a2d;
+    border-left: 6px solid var(--w-red);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.w-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(243, 239, 228, 0.07) 1px, transparent 1.6px);
+    background-size: 9px 9px;
+    pointer-events: none;
+}
+.w-kicker {
+    display: inline-block;
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    color: var(--w-black);
+    background: var(--w-yellow);
+    padding: 4px 10px 3px 12px;
+    transform: rotate(-2deg);
+    margin-bottom: 14px;
+}
+.w-title {
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(30px, 8vw, 52px);
+    line-height: 0.98;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--w-cream);
+    margin: 0 0 12px;
+    text-shadow: 3px 3px 0 var(--w-red);
+}
+.w-intro {
+    position: relative;
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 34em;
+    margin: 0;
+    color: #d8d3c4;
+}
+
+/* Product grid */
+.w-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+@media (min-width: 768px) {
+    .w-grid { grid-template-columns: 1fr 1fr; }
+}
+.w-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--w-panel);
+    border: 1px solid #2a2a2d;
+    border-radius: 4px;
+    padding: 18px 18px 20px;
+    box-shadow: 5px 5px 0 var(--w-red);
+}
+.w-num {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 34px;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 212, 0, 0.55);
+}
+.w-tag {
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--w-yellow);
+    border: 1px solid rgba(255, 212, 0, 0.5);
+    padding: 3px 8px;
+    border-radius: 2px;
+}
+.w-name {
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: var(--w-cream);
+    padding-right: 44px;
+}
+.w-detail {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    flex: 1;
+}
+.w-priceline {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 6px;
+}
+.w-price {
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 22px;
+    color: var(--w-yellow);
+}
+.w-was {
+    font-size: 13px;
+    color: var(--ds-ink-2);
+    text-decoration: line-through;
+    text-decoration-color: var(--w-red);
+    text-decoration-thickness: 2px;
+}
+
+/* Buy button */
+.w-buywrap a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin-top: 10px;
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--w-black) !important;
+    background: var(--w-yellow);
+    border: 2px solid var(--w-black);
+    border-radius: 3px;
+    box-shadow: 4px 4px 0 var(--w-red);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.w-buywrap a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--w-red);
+}
+.w-buywrap a:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 var(--w-red);
+}
+.w-buywrap a:focus-visible {
+    outline: 3px solid var(--w-cream);
+    outline-offset: 2px;
+}
+
+/* Bottom strip */
+.w-strip {
+    margin: 28px 0 20px;
+    padding: 14px 16px;
+    font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(14px, 4vw, 18px);
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--w-cream);
+    background: repeating-linear-gradient(-45deg, var(--w-red) 0 14px, #c32424 14px 28px);
+    border-radius: 3px;
+}
+.w-strip span { color: var(--w-yellow); }
+
+.warrior [data-component="closing"],
+.warrior footer, .warrior small { color: var(--ds-ink-2); }
+
+*{box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;color:#f3efe4}
+.wrap{max-width:960px;margin:0 auto;padding:20px 16px 40px}
+.w-head{font-family:'Arial Black',Arial,sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:13px;color:#ffd400;margin:0 0 14px}
+.w-close{font-size:12px;line-height:18px;color:#b9b3a4;text-align:center;margin:0}
+.w-buywrap a{color:#0b0b0c}
+</style></head><body><div class="wrap warrior">
+<div class="w-hero"><div class="w-kicker">WARRIOR</div><h1 class="w-title">CHOOSE YOUR<br>WEAPON</h1><p class="w-intro">4 training programs. $19.99 USD each. Buy once, yours forever - lifetime access, no subscription. Instant PDF download.</p></div>
+<h2 class="w-head">The arsenal</h2><div class="w-grid"><div class="w-card"><div class="w-num">01</div><div class="w-tag">8-WEEK PROGRAM</div><div class="w-name">The Athlete Rebuild</div><p class="w-detail">8 weeks, 5 disciplines, no guessing. Rebuild yourself as an athlete: gymnastics, running-back power, wrestling, sprinting and boxing. Instant PDF download.</p><div class="w-priceline"><span class="w-price">$19.99 USD</span><span class="w-was">was $29.99</span></div><div class="w-buywrap"><a href="https://buy.stripe.com/8x2eVd9hXeKn2bb18zeAg01">BUY NOW</a></div></div><div class="w-card"><div class="w-num">02</div><div class="w-tag">24-WEEK PROGRAM</div><div class="w-name">The Superhero Physique</div><p class="w-detail">A 24-week athletic aesthetic program. Look strong, move stronger. Muscle, strength and power in the gym. Instant PDF download.</p><div class="w-priceline"><span class="w-price">$19.99 USD</span><span class="w-was">was $29.99</span></div><div class="w-buywrap"><a href="https://buy.stripe.com/9B6aEXcu91XB2bb04veAg02">BUY NOW</a></div></div><div class="w-card"><div class="w-num">03</div><div class="w-tag">24-WEEK PROGRAM</div><div class="w-name">The Superhero Physique: Bodyweight Edition</div><p class="w-detail">No gym, no excuses. 24 weeks with a pull-up bar, the floor and a few weights. Build serious muscle and real strength. Instant PDF download.</p><div class="w-priceline"><span class="w-price">$19.99 USD</span><span class="w-was">was $29.99</span></div><div class="w-buywrap"><a href="https://buy.stripe.com/4gM4gzdyd9q3aHH9F5eAg03">BUY NOW</a></div></div><div class="w-card"><div class="w-num">04</div><div class="w-tag">24-WEEK PROGRAM</div><div class="w-name">The Superhero Physique: Explosive Hybrid Edition</div><p class="w-detail">24 weeks, 5 training days. Power, muscle, strength, unilateral control and mobility with kettlebells, plates, barbells and bodyweight. Instant PDF download.</p><div class="w-priceline"><span class="w-price">$19.99 USD</span><span class="w-was">was $29.99</span></div><div class="w-buywrap"><a href="https://buy.stripe.com/aFa28r2Tzau7g214kLeAg04">BUY NOW</a></div></div></div>
+<div class="w-strip">NO SUBSCRIPTION. NO EXCUSES. <span>LEVEL UP.</span></div>
+<p class="w-close">Payment by card, Apple Pay or Link through Stripe. After payment you are sent straight to the program PDF.</p>
+</div></body></html>
